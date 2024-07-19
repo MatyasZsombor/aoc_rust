@@ -12,11 +12,6 @@ pub fn solution(input: String, num_of_zeroes: usize) -> i32
     return x - 1;
 }
 
-pub fn part2(input: String) -> i32
-{
-    0
-}
-
 #[cfg(test)]
 mod tests_day4
 {

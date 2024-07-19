@@ -3,6 +3,7 @@ mod helpers;
 mod day_02;
 mod day_03;
 mod day_04;
+mod day_05;
 
 use helpers::read_into_string;
 
@@ -15,4 +16,6 @@ fn main() {
     println!("Day 3, Part 2: {}", day_03::part2(read_into_string("inputs/day03")));
     println!("Day 4, Part 1: {}", day_04::solution(read_into_string("inputs/day04"), 5));
     println!("Day 4, Part 2: {}", day_04::solution(read_into_string("inputs/day04"), 6));
+    println!("Day 5, Part 1: {}", day_05::part1(read_into_string("inputs/day05")));
+    println!("Day 5, Part 2: {}", day_05::part2(read_into_string("inputs/day05")));
 }
