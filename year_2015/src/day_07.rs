@@ -1,5 +1,5 @@
 use std::collections::{HashMap, VecDeque};
-use std::ops::{BitAnd, BitOr, Shl};
+use std::ops::{BitAnd, BitOr};
 
 pub fn part1(input: String, b: i32) -> HashMap<String, u16>
 {
