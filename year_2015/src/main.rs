@@ -7,6 +7,7 @@ mod day_05;
 mod day_06;
 mod day_07;
 mod day_08;
+mod day_09;
 
 use helpers::read_into_string;
 
@@ -27,4 +28,8 @@ fn main() {
     println!("Day 7, Part 2: {}", day_07::part2(String::from(read_into_string("inputs/day07"))));
     println!("Day 8, Part 1: {}", day_08::part1(String::from(read_into_string("inputs/day08"))));
     println!("Day 8, Part 2: {}", day_08::part2(String::from(read_into_string("inputs/day08"))));
+
+    let day9 = day_09::part1(String::from(read_into_string("inputs/day09")));
+    println!("Day 9, Part 1: {}", day9.0);
+    println!("Day 9, Part 2: {}", day9.1);
 }
