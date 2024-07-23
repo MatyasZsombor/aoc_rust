@@ -8,6 +8,7 @@ mod day_06;
 mod day_07;
 mod day_08;
 mod day_09;
+mod day_10;
 
 use helpers::read_into_string;
 
@@ -32,4 +33,6 @@ fn main() {
     let day9 = day_09::part1(String::from(read_into_string("inputs/day09")));
     println!("Day 9, Part 1: {}", day9.0);
     println!("Day 9, Part 2: {}", day9.1);
+    println!("Day 10, Part 1: {}", day_10::solution(read_into_string("inputs/day10"), 40));
+    println!("Day 10, Part 1: {}", day_10::solution(read_into_string("inputs/day10"), 50));
 }
