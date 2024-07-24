@@ -36,8 +36,4 @@ mod tests_day10
     {
         assert_eq!(6, solution(String::from("1"), 5));
     }
-
-    #[test]
-    fn test_part2()
-    {}
 }
