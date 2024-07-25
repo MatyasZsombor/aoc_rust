@@ -39,7 +39,7 @@ fn increment_pass(pass: String) -> String
     let mut end = String::from("");
     loop {
         i -= 1;
-        let mut ch = pass.chars().nth(i).unwrap();
+        let ch = pass.chars().nth(i).unwrap();
         let next_ch = ch as u8 + 1;
 
         if next_ch <= 'z' as u8
