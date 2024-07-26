@@ -12,6 +12,7 @@ mod day_10;
 mod day_11;
 mod day_12;
 mod day_13;
+mod day_14;
 
 use helpers::read_into_string;
 
@@ -46,5 +47,6 @@ fn main() {
     println!("Day 12, Part 2: {}", day_12::part2(&json::parse(&*read_into_string("inputs/day12")).unwrap()));
     println!("Day 13, Part 1: {}", day_13::part1(read_into_string("inputs/day13")));
     println!("Day 13, Part 2: {}", day_13::part2(read_into_string("inputs/day13")));
-    println!()
+    println!("Day 14, Part 1: {}", day_14::part1(read_into_string("inputs/day14"), 2503));
+    println!("Day 14, Part 2: {}", day_14::part2(read_into_string("inputs/day14"), 2503));
 }
