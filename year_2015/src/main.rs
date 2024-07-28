@@ -14,6 +14,7 @@ mod day_12;
 mod day_13;
 mod day_14;
 mod day_15;
+mod day_16;
 
 use helpers::read_into_string;
 
@@ -52,4 +53,6 @@ fn main() {
     println!("Day 14, Part 2: {}", day_14::part2(read_into_string("inputs/day14"), 2503));
     println!("Day 15, Part 1: {}", day_15::find_optimal_cookie(read_into_string("inputs/day15"), false));
     println!("Day 15, Part 2: {}", day_15::find_optimal_cookie(read_into_string("inputs/day15"), true));
+    println!("Day 16, Part 1: {}", day_16::part1(read_into_string("inputs/day16")));
+    println!("Day 16, Part 2: {}", day_16::part2(read_into_string("inputs/day16")));
 }
