@@ -15,6 +15,7 @@ mod day_13;
 mod day_14;
 mod day_15;
 mod day_16;
+mod day_17;
 
 use helpers::read_into_string;
 
@@ -55,4 +56,8 @@ fn main() {
     println!("Day 15, Part 2: {}", day_15::find_optimal_cookie(read_into_string("inputs/day15"), true));
     println!("Day 16, Part 1: {}", day_16::part1(read_into_string("inputs/day16")));
     println!("Day 16, Part 2: {}", day_16::part2(read_into_string("inputs/day16")));
+
+    let day17 = day_17::distribute_eggnog(read_into_string("inputs/day17"), 150);
+    println!("Day 17, Part 1: {}", day17.0);
+    println!("Day 17, Part 2: {}", day17.1);
 }
