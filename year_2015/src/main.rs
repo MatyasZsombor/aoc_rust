@@ -16,6 +16,7 @@ mod day_14;
 mod day_15;
 mod day_16;
 mod day_17;
+mod day_18;
 
 use helpers::read_into_string;
 
@@ -60,4 +61,7 @@ fn main() {
     let day17 = day_17::distribute_eggnog(read_into_string("inputs/day17"), 150);
     println!("Day 17, Part 1: {}", day17.0);
     println!("Day 17, Part 2: {}", day17.1);
+
+    println!("Day 18, Part 1: {}", day_18::solve_18(read_into_string("inputs/day18"), 100, false));
+    println!("Day 18, Part 2: {}", day_18::solve_18(read_into_string("inputs/day18"), 100, true));
 }
