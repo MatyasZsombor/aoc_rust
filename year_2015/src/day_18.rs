@@ -112,7 +112,7 @@ pub fn solve_18(input: String, steps: i32, part2: bool) -> i32
 
 
 #[cfg(test)]
-mod tests_day17
+mod tests_day18
 {
     use super::*;
 

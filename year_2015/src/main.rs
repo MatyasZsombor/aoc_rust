@@ -17,6 +17,7 @@ mod day_15;
 mod day_16;
 mod day_17;
 mod day_18;
+mod day_19;
 
 use helpers::read_into_string;
 
@@ -64,4 +65,6 @@ fn main() {
 
     println!("Day 18, Part 1: {}", day_18::solve_18(read_into_string("inputs/day18"), 100, false));
     println!("Day 18, Part 2: {}", day_18::solve_18(read_into_string("inputs/day18"), 100, true));
+    println!("Day 19, Part 1: {}", day_19::part1(read_into_string("inputs/day19")));
+    println!("Day 19, Part 2: {}", day_19::part2(read_into_string("inputs/day19")));
 }
