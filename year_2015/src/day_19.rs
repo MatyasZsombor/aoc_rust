@@ -1,5 +1,5 @@
-use rand::{thread_rng};
 use rand::seq::SliceRandom;
+use rand::thread_rng;
 
 fn execute_replacement(molecule: &str, rule: (&str, &str), start_index: usize) -> String
 {
@@ -42,38 +42,32 @@ pub fn part2(input: String) -> i32
     let parts: Vec<&str> = input.split("\n\n").collect();
     let mut replace_rules: Vec<Vec<&str>> = parts[0].lines().map(|l| l.split(" => ").collect::<Vec<&str>>()).collect();
 
-    let mut molecule = String::from(parts[1]);
+    let molecule = String::from(parts[1]);
     let mut target = molecule.clone();
 
-    let mut replacements = 0;
+    let mut min_replacements = 0;
 
-    while target != String::from("e") {
+    while target != "e" {
         let tmp = target.clone();
 
-        for replacement in replace_rules.iter() {
-            let index = target.find(replacement[1]);
-
-            if index.is_some()
+        for replacement in &replace_rules {
+            if let Some(index) = target.find(replacement[1])
             {
-                let index = index.unwrap();
-                let mut replaced = String::from(&target[0..index]);
-                replaced.push_str(replacement[0]);
-                replaced.push_str(&target[(index + replacement[1].len())..]);
-
-                target = replaced;
-                replacements += 1;
+                target = format!("{}{}{}", &target[..index], replacement[0], &target[(index + replacement[1].len())..]);
+                min_replacements += 1;
+                break;
             }
         }
 
         if tmp == target
         {
             target = molecule.clone();
-            replacements = 0;
             replace_rules.shuffle(&mut thread_rng());
+            min_replacements = 0;
         }
     }
 
-    replacements
+    min_replacements
 }
 
 
